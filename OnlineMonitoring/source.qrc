@@ -1,0 +1,6 @@
+<RCC>
+  <qresource>
+    <file>img_source/green.png</file>
+    <file>img_source/red.png</file>
+  </qresource>
+</RCC>

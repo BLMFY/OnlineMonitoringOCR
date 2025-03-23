@@ -1,0 +1,52 @@
+sudo apt install python3-pip -y
+
+sudo -H pip3 install -U jetson-stats -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip3 install Cython==0.29.33 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip3 install torch-1.11.0-cp38-cp38-linux_aarch64.whl -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+sudo apt-get install -y libopenblas-base libopenmpi-dev
+
+# vim ~/.bashrc
+export OPENBLAS_CORETYPE=ARMV8
+export PATH=/usr/local/cuda-11.4/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64:$LD_LIBRARY_PATH
+export CUDA_ROOT=/usr/local/cuda
+source ~/.bashrc
+
+pip3 install addict==2.4.0 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+sudo pip3 install --upgrade setuptools
+sudo apt install -y python3-venv python3-dev
+
+sudo -H pip3 install shapely -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+sudo -H pip3 install Pillow -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+cd vision-0.12.0
+export BUILD_VERSION=0.12.1
+python3 setup.py install --user
+
+sudo apt-get install -y libgeos-dev
+
+sudo -H pip3 install pyclipper==1.3.0.post4 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+cd ..
+cd torch2trt
+sudo -H pip3 install packaging -i https://pypi.tuna.tsinghua.edu.cn/simple
+python setup.py install --user
+
+sudo apt-get install -y python3-pyqt5
+
+pip install pyserial -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+python3 setup.py build_ext --inplace
+
+
+
+pip3 install PyQt5 opencv-python matplotlib addict==2.4.0 pyserial pyclipper==1.3.0.post4 wmi Pillow shapely packaging Cython==0.29.33 Pandas wmi func_timeout requests -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
+
+python -m pip install paddlepaddle-gpu==2.4.2.post112 -f https://www.paddlepaddle.org.cn/whl/windows/mkl/avx/stable.html

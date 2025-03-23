@@ -1,0 +1,33 @@
+PreProcess:
+  transform_ops:
+  - DecodeImage:
+      channel_first: false
+      img_mode: BGR
+  - MultiLabelEncode: null
+  - RecResizeImg:
+      image_shape:
+      - 3
+      - 48
+      - 320
+  - KeepKeys:
+      keep_keys:
+      - image
+      - label_ctc
+      - label_sar
+      - length
+      - valid_ratio
+PostProcess:
+  name: CTCLabelDecode
+  character_dict:
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - .
+  - '-'
