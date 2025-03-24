@@ -1,40 +1,49 @@
-# ONLINEMONITORING 工业面板智能文字监测软件
+# 📌 ONLINEMONITORING 工业面板智能文字监测软件
 
     该项目以PyQt为框架开发，集成OCR视觉监测模型于后端，实现了视频监控，自动/半自动的文字文本检测，数据记录，自定义预警，简易波形占空比检测等工业视觉功能，欢迎测试讨论！！
 
-## 安装依赖
+## 📝 安装依赖
 
+    # 安装pytorch依赖
+    pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+
+    安装环境依赖
     pip install -r requirements.txt
     
-## 使用方法
+## 🖼️ 使用方法
 
-    脚本测试：
+    # 脚本测试：
     python demo_start.py
 
-    运行测试：
+    # 运行测试：
     python run.py
 
-## 项目结构
-│
-├── OnlineMonitoring/
-│   ├── __init__.py
-│   ├── demo_start.py      # 主程序，所有实现功能代码
-│   ├── run.py             # 主程序运行脚本（检测设备序列号）
-│   ├── window1.py         # 界面窗口类
-│   ├── ..                 # 工具脚本
-│   ├── ch_PP-OCRv3_det_infer/        # OCR模型权重存放路径
-│   ├── ch_PP-OCRv3_rec_infer/        # OCR模型权重存放路径
-│   ├── ch_PP-OCRv4_rec_infer/        # OCR模型权重存放路径
-│   ├── Data/        # 默认数据保存
-│   ├── ../          # OCR模型权重存放路径
-├── qt_ui/           # 界面脚本
-│   ├── DEMO.ui      
-│   ├── xx.ui      # qt界面文件
-├── multi_threading.py
-├── ..                     # 相机调试API     
-└── requirements.txt       # 项目依赖文件
+## 🚀 项目结构
+    │
+    ├── OnlineMonitoring/
+    │   ├── __init__.py
+    │   ├── demo_start.py      # 主程序，所有实现功能代码
+    │   ├── run.py             # 主程序运行脚本（检测设备序列号）
+    │   ├── window1.py         # 界面窗口类
+    │   ├── ..                 # 工具脚本
+    │   ├── ch_PP-OCRv3_det_infer/        # OCR模型权重存放路径
+    │   ├── ch_PP-OCRv3_rec_infer/        # OCR模型权重存放路径
+    │   ├── ch_PP-OCRv4_rec_infer/        # OCR模型权重存放路径
+    │   ├── Data/        # 默认数据保存
+    │   ├── ../          # OCR模型权重存放路径
+    ├── qt_ui/           # 界面脚本
+    │   ├── DEMO.ui      
+    │   ├── xx.ui      # qt界面文件
+    ├── multi_threading.py
+    ├── ..                     # 相机调试API
+    └── requirements.txt       # 项目依赖文件
 
-## 注意
+## 🚀 界面预览
+![监控界面](/fig/moni_win.png)
+
+![数据和设置界面](/fig/para_set.png)
+
+## 🛠️ 注意
 
 * 该系统启动时会检测默认的usb驱动报警灯接口，若存在设备，在【启动报警】时候将实现工业报警灯功能，无报警灯不影响其他功能正常使用；
 
