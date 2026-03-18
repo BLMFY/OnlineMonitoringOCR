@@ -1,0 +1,21 @@
+{
+    "camera_id": 0,
+    "camera_width": 1280,
+    "camera_height": 720,
+    "test_mode_enabled": true,
+    "test_material_path": "E:/project/OnlineMonitoring8.0/testImg/image_00009.jpg",
+    "camera_brightness": 0.5,
+    "camera_saturation": 0.5,
+    "alarm_light_type": "serial",
+    "alarm_light_address": "",
+    "alarm_light_port": 9600,
+    "alarm_light_mode": "flash",
+    "alarm_light_flash_frequency": 2,
+    "text_detection_model": "model_1",
+    "text_detection_confidence": 0.5,
+    "ocr_model": "ocr_model_1",
+    "enhancement_model": "enhance_model_1",
+    "enhancement_strength": "medium",
+    "log_path": "./logs",
+    "data_path": "./data"
+}
